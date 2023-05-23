@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RedditServiceService } from './reddit-service.service';
+import { RedditServiceService } from './reddit.service';
 
 describe('RedditServiceService', () => {
   let service: RedditServiceService;
