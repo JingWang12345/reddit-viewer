@@ -1,1 +1,27 @@
-<p>home-page works!</p>
+<mat-toolbar color="primary">
+  <span>Reddit Viewer</span>
+  <span class="spacer"></span>
+  <mat-form-field>
+   <mat-label>Choose Argument</mat-label>
+   <mat-select [(ngModel)]="selectedArgument" (ngModelChange)="loadPosts()">
+     <mat-option value="all">All</mat-option>
+     <mat-option value="art">Art</mat-option>
+     <mat-option value="worldnews">News</mat-option>
+     <mat-option value="aww">Animals</mat-option>
+     <mat-option value="pokemon">Pokemon</mat-option>
+
+   </mat-select>
+ </mat-form-field>
+  <!-- <button *ngIf="isLight" mat-icon-button (click)="changeThemes()">
+    <mat-icon>dark_mode</mat-icon>
+  </button>
+  <button *ngIf="!isLight" mat-icon-button (click)="changeThemes()">
+   <mat-icon>light_mode</mat-icon>
+ </button> -->
+ <button mat-icon-button (click)="changeThemes()">
+   <mat-icon>{{isLight ? "dark_mode" : "light_mode"}}</mat-icon>
+ </button>
+ </mat-toolbar>
+ <!-- <div class="card-container">
+   <app-post-card *ngFor="let post of posts" [post]="post"></app-post-card>
+ </div> -->
